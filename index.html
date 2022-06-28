@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- meta tag -->
+    <meta charset="utf-8" />
+    <title> Dire Lej - NFT</title>
+    <meta name="description" content="" />
+    <!-- responsive tag -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <!-- Bootstrap v4.4.1 css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <!-- animate css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+    <!-- fontawesome css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome-min.css" />
+    <!-- off canvas css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/off-canvas.css" />
+    <!-- flaticon css  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/ico-moon-fonts.css" />
+    <!-- swiper css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.css" />
+    <!-- spacing css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/sc-spacing.css" />
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="text/css" href="assets/css/fonts.css" />
+</head>
+
+<body>
+    <!--Preloader area start here-->
+    <section class="loader_first">
+        <div class="circular-spinner"></div>
+    </section>
+    <!--Preloader area End here-->
+
+    <!--Header Start-->
+    <div class="bithu_header" id="navbar">
+        <div class="container">
+            <!-- Main Menu Start -->
+            <div class="bithu_menu_sect">
+                <div class="bithu_menu_left_sect">
+                    <div class="logo">
+                        <a href="index.html">
+                            <!-- <div class="logo-text">
+                                    <h1>Dire Lej</h1>
+                                    <span>የድሬ ልጅ</span>
+                                </div> -->
+                            <img src="/assets/images/logo.png" alt="" class="logo" />
+                        </a>
+                    </div>
+                </div>
+                <div class="bithu_menu_right_sect bithu_v2_menu_right_sect">
+                    <div class="bithu_menu_list bithuv4_menu_list">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#disclaimer">Disclaimer</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#roadmap">Roadmap</a></li>
+                            <li><a href="#team">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="bithu_menu_right_buttons bithuv4_menu_right_buttons">
+                        <button class="menu_bar"><i class="fa-solid fa-bars"></i></button>
+                        <button class="connect_btn hov_shape_show" onclick="onMintButtonClick()">
+                            <img src="assets/images/icon/connect_wallet.svg" alt="" />MINT
+                            <span class="hov_shape1"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                            <span class="hov_shape2"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                            <span class="square_hov_shape"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Menu End -->
+
+            <!-- Mobile Menu Start -->
+            <div class="bithu_mobile_menu" id="bithu_mobile_menu">
+                <div class="bithu_mobile_menu_content">
+                    <div class="mobile_menu_logo">
+                        <span>
+                            <!-- <div class="logo-text">
+                                    <h1>Dire Lej</h1>
+                                    <span>የድሬ ልጅ</span>
+                                </div> -->
+                            <img src="/assets/images/logo.png" alt="" class="logo" />
+                        </span>
+                        <button class="mobile_menu_close_btn"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="bithu_mobile_menu_list">
+                        <ul>
+                            <li class="mobile_menu_hide"><a href="#home">Home</a></li>
+                            <li class="mobile_menu_hide"><a href="#about">About</a></li>
+                            <li class="mobile_menu_hide"><a href="#roadmap">Roadmap</a></li>
+                            <li class="mobile_menu_hide"><a href="#team">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile_menu_btns">
+                        <ul class="mobile_menu_social_links">
+                            <li><a href="#"><img src="assets/images/icon/opensea.svg" alt="" /></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+                        </ul>
+                        <button class="connect_btn hov_shape_show mobile_menu_hide" onclick="onMintButtonClick()">
+                            <img src="assets/images/icon/connect_wallet.svg" alt="" />MINT
+                            <span class="hov_shape1"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                            <span class="hov_shape2"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                            <span class="square_hov_shape"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu End -->
+        </div>
+    </div>
+    <!-- Header Section End -->
+
+    <!--Banner Section Start-->
+    <div class="bithu_v4_baner_sect" id="home">
+        <canvas id="canvas" class="v4firefly_bg"></canvas>
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="bithu_v1_baner_right bithu_v4_baner_right">
+                        <span class="star1"><img src="assets/images/icon/v4_star1.svg" alt="star" /></span>
+                        <span class="star2"><img src="assets/images/icon/v4_star2.svg" alt="star" /></span>
+                        <span class="star3"><img src="assets/images/icon/v4_star3.svg" alt="star" /></span>
+                        <div class="bithu_v4_baner_right_content">
+                            <div class="v4_baner_img_card v4_baner_img_card1">
+                                <div class="v4_baner_img v4_baner_img1">
+                                    <img src="assets/images/arts/8.png" alt="img" />
+                                </div>
+                                <div class="v4_baner_img_shapes">
+                                    <div class="v4_baner_img_shapes_left">
+                                        <div class="shape_1"></div>
+                                        <div class="shape_2"></div>
+                                    </div>
+                                    <div class="v4_baner_img_shapes_right">
+                                        <div class="shape_3"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="v4_baner_img_card v4_baner_img_card2">
+                                <div class="v4_baner_img v4_baner_img2">
+                                    <div class="mint-slideshow-container">
+
+                                        <div class="mintSlides">
+                                            <img src="assets/images/arts/1.png" alt="img" class="img-fluid" />
+                                        </div>
+
+                                        <div class="mintSlides">
+                                            <img src="assets/images/arts/2.png" alt="img" class="img-fluid" />
+                                        </div>
+
+                                        <div class="mintSlides">
+                                            <img src="assets/images/arts/3.png" alt="img" class="img-fluid" />
+                                        </div>
+
+                                        <div class="mintSlides">
+                                            <img src="assets/images/arts/4.png" alt="img" class="img-fluid" />
+                                        </div>
+
+                                    </div>
+                                    <br>
+
+                                    <div style="display: none">
+                                        <span class="dotmint"></span>
+                                        <span class="dotmint"></span>
+                                        <span class="dotmint"></span>
+                                        <span class="dotmint"></span>
+                                    </div>
+                                </div>
+                                <div class="v4_baner_img_shapes">
+                                    <div class="v4_baner_img_shapes_left">
+                                        <div class="shape_1"></div>
+                                        <div class="shape_2"></div>
+                                    </div>
+                                    <div class="v4_baner_img_shapes_right">
+                                        <div class="shape_3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bithu_v4_baner_right_overlay">
+                                <span><img src="assets/images/nft/v4_baner_mesh-grad.png" alt="img" /></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bithu_v1_baner_left bithu_v4_baner_left">
+                        <h2>Dire Lej <span><img src="assets/images/icon/cat_foot_print.svg" alt="icon"
+                                    class="cat_foot_print" /> <img src="assets/images/icon/cat_walk_round_shap.svg"
+                                    alt="" class="cat_walk_round_shape rotated-style" /></span> <br>NFT COLLECTION</h2>
+                        <h5 class="uppercase" style="color: rgb(218, 218, 121);">Max 5 NFTs per wallet</h5>
+                        <br />
+                        <h4 class="uppercase">Whitelist Sale (To be Announced)</h4>
+                        <h4>Public Sale (To Be Announced)</h4>
+                        <div class="bithu_v1_baner_buttons mt-43">
+                            <button class="mint_btn hov_shape_show" onclick="onMintButtonClick()">
+                                Mint now
+                                <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L_dark.svg"
+                                        alt="" /></span>
+                                <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L_dark.svg"
+                                        alt="" /></span>
+                                <span class="square_hov_shape_dark"></span>
+                            </button>
+                            <button class="widhlist_btn hov_shape_show">
+                                Whitelist Now
+                                <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <span class="square_hov_shape"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Banner Section End-->
+    <div class="bithu_v4owl_carousel_sect">
+        <div class="bithu_v4owl_carousel_content">
+            <ul>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+            </ul>
+            <ul>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+                <li><span><img src="assets/images/icon/mint_live_icon.svg" alt="icon" /></span>COMING SOON</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="how_to_mint_sect" id="disclaimer">
+        <div class="container how_to_mint_container">
+            <div class="bithu_title_section md-pb-20">
+                <h2>WHAT TO KNOW<img src="assets/images/icon/title_shapes.svg" alt="" /></h2>
+                <h3>Disclaimer</h3>
+            </div>
+            <div class="how_to_mint_shadow">
+                <img src="assets/images/nft/Mesh-Grad.png" alt="" />
+            </div>
+            <div class="how_to_mint_content">
+                <p>NFTs or "Non-fungible tokens" are highly speculative assets and should be engaged with proper research and study.</p>
+                <p>The prices of blockchain and digital assets are extremely volatile and can drastically affect the value of your Dire Lej NFTs.</p>
+                <p> There is no guarantee that any Dire Lej NFT buyers will not lose money given these risks.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="how_to_mint_sect">
+        <div class="container how_to_mint_container">
+            <div class="bithu_title_section md-pb-20">
+                <h2>Easy steps<img src="assets/images/icon/title_shapes.svg" alt="" /></h2>
+                <h3>How to mint</h3>
+            </div>
+            <div class="how_to_mint_shadow">
+                <img src="assets/images/nft/Mesh-Grad.png" alt="" />
+            </div>
+            <div class="how_to_mint_content">
+                <ul>
+                    <li>
+                        <h4 class="green">1</h4>
+                        <p>Connect Your Wallet</p>
+                    </li>
+
+                    <li>
+                        <h4 class="blue">2</h4>
+                        <p>Select Your Quantity</p>
+                    </li>
+
+                    <li>
+                        <h4 class="yellow">3</h4>
+                        <p>Confiem the Transaction</p>
+                    </li>
+
+                    <li>
+                        <h4 class="red">4</h4>
+                        <p>Receive Your NFTs</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Counter Section End-->
+
+    <!-- About Us section Start -->
+    <div class="v1_about_us_section bithu-about-section3 height-auto" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="v1_about_us_right_sect">
+                        <div class="bithu_title_section">
+                            <h2>THE STORY <span><img src="assets/images/icon/title_shapes.svg" alt="" /></span></h2>
+                            <h3 class="uppercase">About Us</h3>
+                        </div>
+                        <div class="v1_about_us_right_text">
+                            <p>We are a team dedicated to educating Ethiopian, Eritrean, and African people on Web 3.
+                            </p>
+                            <p> We
+                                believe this technology can be a tool for people to discover new ways and ideas to run a
+                                business, sell art, or fund projects. One of the things we want to build through this
+                                project is an NFT marketplace or platform specifically designed for this community. </p>
+                            <p>Dire Lej is created by an Ethiopian diaspora who wants to give back to her homeland by
+                                putting NFTs, crypto, and the metaverse to good use.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-left-item pl-45 md-pl-0 md-mt-30">
+                        <div class="bithu_title_section mb-30">
+                            <h2 class="uppercase white-color">Meet The Artists <span><img
+                                        src="assets/images/icon/title_shapes.svg" alt="" /></span></h2>
+                        </div>
+                        <div class="ab-content d-flex">
+                            <div class="ab-item-box mr-30">
+                                <img src="assets/images/arts/5.png" alt="">
+                                <div class="ab-text pt-20">
+                                    <h5><a href="#">Ermias <img src="assets/images/icon/ab-icon-image.png" alt=""></a>
+                                    </h5>
+                                </div>
+                                <span>Artist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About US Section End -->
+
+    <div class="triader_benefits_sect">
+        <div class="container">
+            <div class="bithu_title_section">
+                <h2>Features<img src="assets/images/icon/title_shapes.svg" alt="" /></h2>
+                <h3>NFT Grants</h3>
+            </div>
+            <div class="about_us_text_card_sect triader_benefits_card">
+                <div class="row">
+                    <div class="col-md-4 mb-30">
+                        <div class="about_us_text_card">
+                            <h3><img src="assets/images/icon/aboutus_card_icon5.png" alt="icon" />Education</h3>
+                            <p>To provide lessons, tutorials, guides, and other materials related to NFTs and
+                                cryptocurrencies free of charge.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-30">
+                        <div class="about_us_text_card">
+                            <h3><img src="assets/images/icon/aboutus_card_icon6.png" alt="icon" />Social Platform </h3>
+                            <p>To create an environment on a social platform where people can learn and openly share
+                                their opinions, knowledge, and experiences on NFTs and cryptocurrencies. .</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-30">
+                        <div class="about_us_text_card">
+                            <h3><img src="assets/images/icon/aboutus_card_icon1.png" alt="icon" />Community</h3>
+                            <p>To launch 9,999 NFTs that will serve as a tool to introduce and give a hands-on
+                                experience of this technology to the Ethiopian community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cat_imgs_sect">
+        <div class="cat_imgs_row1">
+            <ul>
+                <li><span><img src="assets/images/arts/1.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/2.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/3.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/4.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/5.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/6.png" alt="img" /></span></li>
+            </ul>
+            <ul>
+                <li><span><img src="assets/images/arts/1.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/2.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/3.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/4.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/5.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/6.png" alt="img" /></span></li>
+
+            </ul>
+        </div>
+        <div class="cat_imgs_row2">
+            <ul>
+                <li><span><img src="assets/images/arts/7.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/8.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/9.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/10.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/11.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/12.png" alt="img" /></span></li>
+            </ul>
+            <ul>
+                <li><span><img src="assets/images/arts/7.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/8.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/9.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/10.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/11.png" alt="img" /></span></li>
+                <li><span><img src="assets/images/arts/12.png" alt="img" /></span></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Roadmap Section Start -->
+    <div class="v2_roadmap_sect v4_roadmap_sect" id="roadmap">
+        <div class="container">
+            <div class="bithu_title_section text-center">
+                <h2><span class="shape_left"><img src="assets/images/icon/title_shapes2.svg" alt="" /></span>Our
+                    Goals<span><img src="assets/images/icon/title_shapes.svg" alt="" /></span></h2>
+                <h3>Roadmap</h3>
+            </div>
+            <div class="v2_rodmap_card_sect">
+                <div class="v2_roadmap_divider">
+                    <img src="assets/images/nft/v4_roadmap_divider.png" alt="" />
+                </div>
+            </div>
+            <div class="v4_roadmap_content">
+                <div class="row">
+                    <div class="col-md-6 pt-50">
+                        <div class="v4roadmap_img_card v4roadmap_img_card_left">
+                            <img src="assets/images/nft/1.png" alt="img" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="v4roadmap_text mt-31 v4roadmap_text_right">
+                            <h4 class="mb-28">Phase 01 - May 2022</h4>
+                            <ul>
+                                <li><span class="icon_check"></span>Incubation and Ideation of Project </li>
+                                <li><span class="icon_check"></span>Social Platforms Launch </li>
+                                <li><span class="icon_check"></span>Lite paper</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row flex-row-reverse mt-100">
+                    <div class="col-md-6 pt-50">
+                        <div class="v4roadmap_img_card v4roadmap_img_card_right">
+                            <img src="assets/images/nft/2.png" alt="img" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="v4roadmap_text mt-31 v4roadmap_text_left">
+                            <h4 class="mb-28">Phase 02 - June 2022</h4>
+                            <ul>
+                                <li>Community Building <span class="icon_check"></span></li>
+                                <li>Website Launch <span class="icon_check"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-100">
+                    <div class="col-md-6 pt-50">
+                        <div class="v4roadmap_img_card v4roadmap_img_card_left">
+                            <img src="assets/images/nft/3.png" alt="img" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="v4roadmap_text mt-31 v4roadmap_text_right">
+                            <h4 class="mb-28">Phase 03 - July 2022</h4>
+                            <ul>
+                                <li><span class="icon_munies"></span>NFT Reveal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row flex-row-reverse mt-100">
+                    <div class="col-md-6 pt-50">
+                        <div class="v4roadmap_img_card v4roadmap_img_card_right">
+                            <img src="assets/images/nft/4.png" alt="img" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="v4roadmap_text mt-31 v4roadmap_text_left">
+                            <h4 class="mb-28">Phase 04 - August 2022</h4>
+                            <ul>
+                                <li>Wave 1 - 3333 NFTs<span class="icon_munies"></span></li>
+                                <li>Holder’s Discord Server Launch <span class="icon_munies"></span></li>
+                                <li>1st Community Raffle (NFT Sales Funded)<span class="icon_munies"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-100">
+                    <div class="col-md-6 pt-50">
+                        <div class="v4roadmap_img_card v4roadmap_img_card_left">
+                            <img src="assets/images/nft/5.png" alt="img" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="v4roadmap_text mt-31 v4roadmap_text_right">
+                            <h4 class="mb-28">Phase 05 - September 2022</h4>
+                            <ul>
+                                <li><span class="icon_munies"></span>1st Community-Driven Project (NFT Sales Funded)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row flex-row-reverse mt-100">
+                    <div class="col-md-6 pt-50">
+                        <div class="v4roadmap_img_card v4roadmap_img_card_right">
+                            <img src="assets/images/nft/6.png" alt="img" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="v4roadmap_text mt-31 v4roadmap_text_left">
+                            <h4 class="mb-28">Phase 06 - October 2022</h4>
+                            <ul>
+                                <li>Wave 2 - 3333 NFTs<span class="icon_munies"></span></li>
+                                <li>2nd Community Raffle (NFT Sales Funded) <span class="icon_munies"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bithu_v4_roadmap_mass_gard">
+            <img src="assets/images/nft/v2_roadmap_bg_shape.png" alt="" />
+        </div>
+    </div>
+    <!-- Roadmap Section End -->
+
+
+    <!-- Team Section Start-->
+    <div class="bithu_team_sect v4_team_sect" id="team">
+        <div class="v4_team_overlay">
+            <div class="container">
+                <div class="bithu_title_section text-center">
+                    <h2><span class="shape_left"><img src="assets/images/icon/title_shapes2.svg" alt="" /></span>TEAM
+                        MEMBERS<span><img src="assets/images/icon/title_shapes.svg" alt="" /></span></h2>
+                    <h3>Meet The Crew</h3>
+                </div>
+                <div class="bithu_team_content">
+                    <div class="row" style=" flex-wrap: wrap; justify-content: center;">
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="bithu_team_card hov_shape_team">
+                                <div class="team_member_img">
+                                    <img src="assets/images/team/2.png" alt="" />
+                                </div>
+                                <h3>Kanessa Muluneh</h3>
+                                <h4>CEO/Founder</h4>
+                                <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <div class="team_social_icon">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="bithu_team_card hov_shape_team">
+                                <div class="team_member_img">
+                                    <img src="assets/images/team/1.png" alt="" />
+                                </div>
+                                <h3>Remcon Coerman</h3>
+                                <h4>CFO and Advisor</h4>
+                                <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <div class="team_social_icon">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="bithu_team_card hov_shape_team">
+                                <div class="team_member_img">
+                                    <img src="assets/images/team/3.png" alt="" />
+                                </div>
+                                <h3>Jugoslav</h3>
+                                <h4>Developer</h4>
+                                <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <div class="team_social_icon">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="bithu_team_card hov_shape_team">
+                                <div class="team_member_img">
+                                    <img src="assets/images/team/4.png" alt="" />
+                                </div>
+                                <h3>Ermias</h3>
+                                <h4>Artist</h4>
+                                <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <div class="team_social_icon">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="bithu_team_card hov_shape_team">
+                                <div class="team_member_img">
+                                    <img src="assets/images/team/5.png" alt="" />
+                                </div>
+                                <h3>Rom</h3>
+                                <h4>Marketing</h4>
+                                <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <div class="team_social_icon">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="bithu_team_card hov_shape_team">
+                                <div class="team_member_img">
+                                    <img src="assets/images/team/6.png" alt="" />
+                                </div>
+                                <h3>Rob</h3>
+                                <h4>Community Support</h4>
+                                <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                <div class="team_social_icon">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team Section End-->
+
+    <!-- Distribution -->
+    <div class="triader_benefits_sect">
+        <div class="container">
+            <div class="bithu_title_section">
+                <h2>Distribution<img src="assets/images/icon/title_shapes.svg" alt="" /></h2>
+                <h3>NFT Sale Distribution</h3>
+            </div>
+            <div class="about_us_text_card_sect triader_benefits_card">
+                <div class="row">
+                    <div class="col-md-4 mb-30">
+                        <div class="about_us_text_card">
+                            <h3><img src="assets/images/icon/aboutus_card_icon2.png" alt="icon" />Community</h3>
+                            <p>85% of the total NFT sales will go back to the community through community-driven
+                                projects, raffles, events, airdrops, etc. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-30">
+                        <div class="about_us_text_card">
+                            <h3><img src="assets/images/icon/aboutus_card_icon2.png" alt="icon" />Team </h3>
+                            <p>10% of the total NFT sales will be distributed to the team members which includes; the
+                                project owner, advisor, developer, artist, marketing team, etc. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-30">
+                        <div class="about_us_text_card">
+                            <h3><img src="assets/images/icon/aboutus_card_icon2.png" alt="icon" />Fees</h3>
+                            <p>5% of the total NFT sales will be allocated for transaction fees, listing fees, etc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Distribution -->
+
+    <!-- Bithu Footer Section Start -->
+    <div class="bithu_v4_footer_sect pt-30">
+        <div class="container">
+            <div class="bithu_title_section text-center">
+                <h3>Join Our community & <br>get Early access <br>🤙</h3>
+            </div>
+            <div class="bithu_v1_footer_content">
+                <div class="join_comunity_btns">
+                    <button class="wishlist_btn hov_shape_show uppercase">
+                        Whitelist Now
+                        <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L_dark.svg" alt="" /></span>
+                        <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L_dark.svg" alt="" /></span>
+                        <span class="square_hov_shape_dark"></span>
+                    </button>
+
+                    <button class="join_discord_btn hov_shape_show">
+                        <img src="assets/images/icon/dis_logo.svg" alt="" />Join Discord
+                        <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                        <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                        <span class="square_hov_shape_dark"></span>
+                    </button>
+                </div>
+                <div class="footer_social_links">
+                    <ul>
+                        <li class="social_hov_shape_show">
+                            <a href="#"><span><img src="assets/images/icon/opensea.svg" alt="" /></span></a>
+                            <span class="social_hov_shape1"><img src="assets/images/icon/hov_shape_s.svg"
+                                    alt="" /></span>
+                        </li>
+                        <li class="social_hov_shape_show">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <span class="social_hov_shape1"><img src="assets/images/icon/hov_shape_s.svg"
+                                    alt="" /></span>
+                        </li>
+                        <li class="social_hov_shape_show">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <span class="social_hov_shape1"><img src="assets/images/icon/hov_shape_s.svg"
+                                    alt="" /></span>
+                        </li>
+                        <li class="social_hov_shape_show">
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <span class="social_hov_shape1"><img src="assets/images/icon/hov_shape_s.svg"
+                                    alt="" /></span>
+                        </li>
+                        <li class="social_hov_shape_show">
+                            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                            <span class="social_hov_shape1"><img src="assets/images/icon/hov_shape_s.svg"
+                                    alt="" /></span>
+                        </li>
+                        <li class="social_hov_shape_show">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <span class="social_hov_shape1"><img src="assets/images/icon/hov_shape_s.svg"
+                                    alt="" /></span>
+                        </li>
+                        <li class="social_hov_shape_show">
+                            <a href="#"><img src="assets/images/icon/med.svg" alt="" /></a>
+                            <span class="social_hov_shape1"><img src="assets/images/icon/hov_shape_s.svg"
+                                    alt="" /></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_stras_sect">
+                    <div class="footer_stars">
+                        <span class="star_1"><img src="assets/images/icon/star_6.svg" alt="" /></span>
+                        <span class="star_2"><img src="assets/images/icon/star_3.svg" alt="" /></span>
+                        <span class="star_3"><img src="assets/images/icon/star_1.svg" alt="" /></span>
+                        <span class="star_4"><img src="assets/images/icon/star_7.svg" alt="" /></span>
+                        <span class="star_5"><img src="assets/images/icon/star_4.svg" alt="" /></span>
+                        <span class="star_6"><img src="assets/images/icon/star_2.svg" alt="" /></span>
+                        <span class="star_7"><img src="assets/images/icon/star_5.svg" alt="" /></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bithu_v1_main_footer bithu_v4_main_footer">
+            <div class="bithu_v1_main_footer_overlay">
+            </div>
+            <div class="footer_bottom v4_footer_bottom">
+                <div class="footer_bottom_content">
+                    <span class="footer_shapes_left"><img src="assets/images/icon/footer_shapes_left.png"
+                            alt="" /></span>
+                    <span class="footer_shapes_right"><img src="assets/images/icon/footer_shapes_right.png"
+                            alt="" /></span>
+                    <div class="container">
+                        <div class="footer_menu">
+                            <div class="bottom_footer_left">
+                                <div class="footer_logo">
+                                    <a href="#">
+                                        <!-- <div class="logo-text">
+                                                <h1>Dire Lej</h1>
+                                                <span>የድሬ ልጅ</span>
+                                            </div> -->
+                                        <img src="/assets/images/logo.png" alt="" class="logo" />
+                                    </a>
+                                </div>
+                                <div class="copiright_text pl-40">
+                                    Copyright © 2022 Dire Lej
+                                </div>
+                            </div>
+                            <a href="#" class="bact_to_top_btn"><img src="assets/images/icon/back_to_top.svg"
+                                    alt="" /></a>
+                            <div class="bottom_footer_right">
+                                <ul>
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#roadmap">Roadmap</a></li>
+                                    <li><a href="#team">Team</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Section Start-->
+    <!-- Bootstrap.min js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- web3 min.js -->
+    <script src="assets/js/web3.min.js"></script>
+    <!-- modernizr.js -->
+    <script src="assets/js/modernizr-2.8.3.min.js"></script>
+    <!-- jquery.min js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- imagesloaded.pkgd.min js -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!-- wow.min js -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- counterup.min js -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- waypoints.min js -->
+    <script src="assets/js/waypoints.min.js"></script>
+    <!-- plugins.min js -->
+    <script src="assets/js/plugins.js"></script>
+    <!-- fireflys js -->
+    <script src="assets/js/fireflys.js"></script>
+    <!-- faq.min js -->
+    <script src="assets/js/faq.js"></script>
+    <!-- swiper.js -->
+    <script src="assets/js/swiper-min.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        //Auto Slide mintn One
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mintSlides");
+            let dots = document.getElementsByClassName("dotmint");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 500); // Change image every 2 seconds
+        };
+
+        function onMintButtonClick() {
+            window.open("https://mint.direlej.com", "_blank");
+        }
+    </script>
+</body>
+
+</html>

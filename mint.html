@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <!-- meta tag -->
+        <meta charset="utf-8" />
+        <title> Bithu - NFT Minting/Collection Landing Page HTML5 Template</title>
+        <meta name="description" content="" />
+        <!-- responsive tag -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- favicon -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png" />
+        <!-- Bootstrap v4.4.1 css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+        <!-- animate css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+        <!-- fontawesome css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/fontawesome-min.css" />
+        <!-- off canvas css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/off-canvas.css" />
+        <!-- flaticon css  -->
+        <link rel="stylesheet" type="text/css" href="assets/css/ico-moon-fonts.css" />
+        <!-- swiper css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/swiper.css" />
+        <!-- spacing css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/sc-spacing.css" />
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <!-- responsive css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
+    </head>
+	<body>
+        <!--Preloader area start here-->
+        <section class="loader_first">
+            <div class="circular-spinner"></div>
+        </section>
+        <!--Preloader area End here-->
+        
+        <div class="bithu_mint_header bithu_header" id="navbar">
+            <div class="bithu_mint_header_inner">
+                <div class="bithu_mint_header_left">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/mint-logo.png" alt="logo" /></a>
+                    </div>
+                </div>
+                <div class="bithu_mint_header_right">
+                    <button class="btn-small-gray hov_shape_show" data-bs-toggle="modal" data-bs-target="#connectModal">
+                        <img src="assets/images/icon/connect_wallet.svg" alt="" class="btn_icon"/>CONNECT
+                        <span class="hov_shape1"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                        <span class="hov_shape2"><img src="assets/images/icon/hov_shape_s.svg" alt="" /></span>
+                        <span class="square_hov_shape"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buthu_mint_body buthu_mint1_body">
+            <div class="buthu_mint1_bg">
+                <div class="buthu_mint_bg_overlay">
+                    <canvas id="canvas" class="firefly_bg"></canvas>
+                </div>
+            </div>
+            <div class="container">
+                <div class="buthu_mint_body_content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="buthu_mint1_body_left">
+                                <div class="buthu_mint1_body_left_content">
+                                    <div class="mint-item_img">
+                                        <div class="mint-slideshow-container">
+
+                                            <div class="mintSlides">
+                                                <img src="assets/images/nft/v4-slider-img.png" alt="img" class="img-fluid" />
+                                            </div>
+
+                                            <div class="mintSlides">
+                                                <img src="assets/images/nft/v4-slider-img2.png" alt="img" class="img-fluid" />
+                                            </div>
+
+                                            <div class="mintSlides">
+                                                <img src="assets/images/nft/v4-slider-img3.png" alt="img" class="img-fluid" />
+                                            </div>
+                                            
+                                            <div class="mintSlides">
+                                                <img src="assets/images/nft/v4-slider-img4.png" alt="img" class="img-fluid" />
+                                            </div>
+
+                                        </div>
+                                        <br>
+
+                                        <div style="display: none">
+                                            <span class="dotmint"></span>
+                                            <span class="dotmint"></span>
+                                            <span class="dotmint"></span>
+                                            <span class="dotmint"></span>
+                                        </div>
+                                    </div>
+                                    <div class="mint_count_list mt-0">
+                                        <ul class="mt-10">
+                                            <li>
+                                                <h5>Remaining</h5>
+                                                <h5>4583/<span>9999</span></h5>
+                                            </li>
+                                            <li>
+                                                <h5>Price</h5>
+                                                <h5>0.15 ETH</h5>
+                                            </li>
+                                            <li>
+                                                <h5>Quantity</h5>
+                                                <div class="mint_quantity_sect">
+                                                    <button onclick="buttonClick_Dec();">-</button>
+                                                    <input type="text" id="quantity" value="2">
+                                                    <button onclick="buttonClick_Inc();">+</button>
+                                                </div>
+                                                <h5><span>0.30</span> ETH</h5>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <button class="btn-mid-green w-100 hov_shape_show" data-bs-toggle="modal" data-bs-target="#mintModal">
+                                        MINT NOW
+                                        <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L_dark.svg" alt="" /></span>
+                                        <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L_dark.svg" alt="" /></span>
+                                        <span class="square_hov_shape"></span>
+                                    </button>
+                                    <p>By clicking “MINT”, You agree to our <a href="#">Terms of Service</a> and our <a href="#">Privacy Policy.</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="buthu_mint1_body_right">
+                                <div class="mint1_mash_gard">
+                                    <span><img src="assets/images/nft/v4_baner_mesh-grad.png" alt="img" /></span>
+                                </div>
+                                <h4 class="mb-12">WHITELIST : SOLDOUT <span><img src="assets/images/icon/mint-right-text-icon.svg" alt="icon" /></span></h4>
+                                <h4 class="mb-15">Presale : SOLDOUT <span><img src="assets/images/icon/mint-right-text-icon.svg" alt="icon" /></span></h4>
+                                <h1>PUBLIC MINT LIVE</h1>
+                                
+                                <div class="buthu_mint1_body_right_timer">
+                                    <h5 class="uppercase">Public Mint end in</h5>
+                                    <div class="timer timer_1">
+                                        <ul>
+                                            <li class="days">24<span>D</span></li>
+                                            <li class="hours">15<span>H</span></li>
+                                            <li class="minutes">44<span>M</span></li>
+                                            <li class="seconds">18<span>S</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <h5 class="mb-12 uppercase">Max 5 NFTs per wallet</h5>
+                                <h5 class="mb-12 uppercase">Price 0.09 ETH + gas</h5>
+                                <h5 class="mb-12 uppercase">Mint is live until 25 apr 04:00H</h5>
+                                
+                                <div class="buthu_mint1_body_right_btns">
+                                    <button class="btn-mid-transparent hov_shape_show">
+                                        <img src="assets/images/icon/dis_logo.svg" alt="icon" class="btn_icon" />Join Discord
+                                        <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                        <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                        <span class="square_hov_shape"></span>
+                                    </button>
+                                    <button class="btn-mid-transparent hov_shape_show">
+                                        <img src="assets/images/icon/Twitter.svg" alt="icon" class="btn_icon" />Join Twitter
+                                        <span class="hov_shape1"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                        <span class="hov_shape2"><img src="assets/images/icon/hov_shape_L.svg" alt="" /></span>
+                                        <span class="square_hov_shape"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bootstrap.min js -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- web3 min.js -->
+        <script src="assets/js/web3.min.js"></script>
+		<!-- modernizr.js -->
+        <script src="assets/js/modernizr-2.8.3.min.js"></script>
+        <!-- jquery.min js -->
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- imagesloaded.pkgd.min js -->
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <!-- wow.min js -->
+        <script src="assets/js/wow.min.js"></script>
+        <!-- fireflys js -->
+        <script src="assets/js/fireflys.js"></script>
+        <!-- counterup.min js -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- waypoints.min js -->
+        <script src="assets/js/waypoints.min.js"></script>
+        <!-- plugins.min js -->
+        <script src="assets/js/plugins.js"></script>
+        <!-- faq.min js -->
+        <script src="assets/js/faq.js"></script>
+        <!-- swiper.js -->
+        <script src="assets/js/swiper-min.js"></script>
+        <!-- Timer.js -->
+        <script src="assets/js/time-counter.js"></script>
+        <!-- main js -->
+        <script src="assets/js/main.js"></script>
+           
+        <script>
+            //Auto Slide mintn One
+
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mintSlides");
+                let dots = document.getElementsByClassName("dotmint");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 500); // Change image every 2 seconds
+            };
+        </script>
+            
+	</body>
+</html>
